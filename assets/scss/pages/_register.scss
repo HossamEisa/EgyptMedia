@@ -233,9 +233,10 @@
       position: relative;
       display: block;
       text-align: right;
-      padding: 40px;
       padding-top: 20px;
-
+      @include mq("lg") {
+        padding: 40px;
+      }
       ul {
         display: flex;
         list-style: none;
@@ -284,4 +285,3 @@
     }
   }
 }
-

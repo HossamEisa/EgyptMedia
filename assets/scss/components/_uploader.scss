@@ -1,0 +1,103 @@
+.upload {
+    &__box {
+      padding: 10px 0;
+    }
+    &__inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  
+    &__btn {
+      display: inline-block;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      min-width: 116px;
+      padding: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid;
+      background-color: #4045ba;
+      border-color: #4045ba;
+      border-radius: 10px;
+      line-height: 26px;
+      font-size: 14px;
+  
+      &:hover {
+        background-color: unset;
+        color: #4045ba;
+        transition: all 0.3s ease;
+      }
+  
+      &-box {
+        margin-bottom: 10px;
+        p {
+          color: var(--main-color);
+          cursor: pointer;
+        }
+      }
+    }
+  
+    &__img {
+      &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+  
+      &-box {
+        width: 100px;
+        height: 100px;
+        padding: 0 10px;
+        margin-bottom: 12px;
+        &:hover {
+          .upload__img-close {
+            top: 10px;
+            opacity: 1;
+          }
+        }
+      }
+  
+      &-close {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        line-height: 24px;
+        z-index: 1;
+        cursor: pointer;
+        opacity: 0;
+        top: 20px;
+        transition: 0.5s ease;
+        color: #fff;
+  
+        &:hover {
+          background-color: #f94349;
+        }
+  
+        &:after {
+          content: "\f00d";
+          font-size: 14px;
+          color: white;
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  
+  .img-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100%;
+  }
+  

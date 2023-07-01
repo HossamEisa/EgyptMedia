@@ -1,4 +1,6 @@
 var header = document.getElementById("innerHeader");
+let viewportWidth = window.innerWidth;
+
 document.addEventListener(
   "DOMContentLoaded",
   function () {

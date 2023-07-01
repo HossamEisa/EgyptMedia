@@ -1,8 +1,8 @@
 // Fonts
 
-$font-r: toggleFont(Poppins-Regular, DINNextLTArabic-Regular);
-$font-l: toggleFont(Poppins-Bold, DINNextLTArabic-Light);
-$font-b: toggleFont(Poppins-Bold, DINNextLTArabic-Bold);
+$font-r: toggleFont(Helvetica, DINNextLTArabic-Regular);
+$font-l: toggleFont(Helvetica-Bold, DINNextLTArabic-Light);
+$font-b: toggleFont(Helvetica-Bold, DINNextLTArabic-Bold);
 
 $bukra-r: toggleFont(Poppins-Bold, bukra-regular);
 $bukra-m: toggleFont(Poppins-Bold, bukra-medium);

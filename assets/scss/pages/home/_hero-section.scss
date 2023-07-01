@@ -1,0 +1,48 @@
+.hero-section {
+  padding-top: 170px;
+  margin-bottom: 80px;
+  position: relative;
+  background-image: url("../img/bg.png");
+  background-position: 100% -20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  @include mq("lg") {
+    height: 700px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    #{$left}: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 40%;
+    background-image: url(../img/orange-shadow-right.png);
+    background-repeat: no-repeat;
+    background-position: #{$right} center;
+    background-size: contain;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+  .hero-carousel {
+    &-title {
+      font-weight: 700;
+      font-size: calcRem(45);
+      line-height: calcRem(55);
+      margin-bottom: calcRem(32);
+      @include mq("md") {
+        font-size: calcRem(60);
+        line-height: calcRem(70);
+      }
+    }
+    &-text {
+      font-size: 16px;
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+  }
+}

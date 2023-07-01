@@ -1,102 +1,158 @@
-var prevScrollpos = window.scrollY;
-/* Get the header element and it's position */
-var headerDiv = document.getElementById("header");
-function changeHeaderStyle() {
-  var currentScrollPos = window.scrollY;
-  /* if scrolling down */
-  if (
-    prevScrollpos < currentScrollPos &&
-    prevScrollpos > 300
-  ) {
-    headerDiv.style.top = -headerDiv.offsetHeight + "px";
-    headerDiv.classList.add("fixed");
-  } else if (prevScrollpos < 300) {
-    headerDiv.style.top = "0";
-    headerDiv.classList.remove("fixed");
-  } else {
-    /* otherwise if we're scrolling up, fix the nav to the top */
-    headerDiv.style.top = "0";
-    headerDiv.classList.add("fixed");
-  }
-
-  prevScrollpos = currentScrollPos;
-}
-window.onscroll = function () {
-  changeHeaderStyle();
-};
-
+var header = document.getElementById("innerHeader");
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    if (header != null) {
+      document.getElementsByTagName("body")[0].style.paddingTop =
+        header.offsetHeight + 40 + "px";
+    }
+  },
+  false
+);
 AOS.init({
   disable: "mobile",
   once: true,
 });
 
-// Init HomePage Latest News Carosuel
-var latestNewsCarousel = new Swiper(".latest-news-carousel ", {
-  effect: "cube",
-  speed: 800,
-  autoplay: {
-    delay: 5000,
-  },
-  loop: true,
-  mousewheel: {
-    invert: true,
-  },
-  cubeEffect: {
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 20,
-    shadowScale: 0.94,
-  },
-  pagination: {
-    el: ".latest-news-carousel  .swiper-pagination",
-    clickable: true,
-  },
-});
+// hero-carousel
 
-// Init HomePage Latest News Carosuel
-var abeerCarousel = new Swiper(".abeer-carousel ", {
-  speed: 800,
-  autoplay: {
-    delay: 5000,
-  },
-  loop: true,
+var heroCarousel = new Swiper(".hero-carousel", {
+  speed: 1400,
+  spaceBetween: 20,
+  // autoplay: {
+  //   delay: 5000,
+  // },
+  // autoHeight: true,
+
+  // loop: true,
   pagination: {
-    el: ".abeer-carousel .swiper-pagination",
+    el: ".hero-section .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".abeer-carousel .swiper-button-next",
-    prevEl: ".abeer-carousel .swiper-button-prev",
+    nextEl: ".hero-section .swiper-button-next",
+    prevEl: ".hero-section .swiper-button-prev",
   },
 });
 
-// Init HomePage international-museums-item  Carosuel
-var internationalCarosuel = new Swiper(".international-museums-carousel ", {
+// Init  speakerscarousel Page  carousel
+var speakerscarousel = new Swiper(".speakers-carousel", {
   speed: 800,
-  autoplay: {
-    delay: 5000,
-  },
-  loop: true,
+  // autoplay: {
+  //   delay: 5000,
+  // },
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 15,
+  // loop: true,
   pagination: {
-    el: ".international-museums-carousel .swiper-pagination",
-    clickable: true,
-  },
-});
-
-
-// Init News Details Page  Carosuel
-var newsDetailsCarousel = new Swiper(".news-details-carousel", {
-  speed: 800,
-  autoplay: {
-    delay: 5000,
-  },
-  loop: true,
-  pagination: {
-    el: ".news-details-carousel .swiper-pagination",
+    el: ".speakers-carousel .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".news-details-carousel .swiper-button-next",
-    prevEl: ".news-details-carousel .swiper-button-prev",
+    nextEl: ".speakers .swiper-button-next",
+    prevEl: ".speakers .swiper-button-prev",
+  },
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      slidesPerGroup: 1,
+    },
+  },
+});
+// Init  testimonialscarousel Page  carousel
+var testimonialscarousel = new Swiper(".testimonials-carousel", {
+  speed: 1200,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  // loop: true,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 3000,
+  },
+  spaceBetween: 0,
+  pagination: {
+    el: ".testimonials .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".testimonials .swiper-button-next",
+    prevEl: ".testimonials .swiper-button-prev",
+  },
+});
+
+// Init  mediaPartners Page  carousel
+var mediaPartners = new Swiper(".media-partners-carousel ", {
+  speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+  slidesPerView: 2,
+  spaceBetween: 0,
+  loop: true,
+  pagination: {
+    el: ".media-partners-carousel .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      pagination: false,
+      navigation: {
+        nextEl: ".media-partners-carousel .swiper-button-next",
+        prevEl: ".media-partners-carousel .swiper-button-prev",
+      },
+    },
+  },
+});
+
+// Init  newsCarousel Page  carousel
+var newsCarousel = new Swiper(".news-carousel ", {
+  speed: 800,
+  autoplay: {
+    delay: 5000,
+  },
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 15,
+  // loop: true,
+  pagination: {
+    el: ".news .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news .swiper-button-next",
+    prevEl: ".news .swiper-button-prev",
+  },
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+      slidesPerGroup: 1,
+    },
   },
 });

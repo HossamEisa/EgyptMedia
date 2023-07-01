@@ -1,0 +1,39 @@
+.speakers {
+  margin-bottom: calcRem(80);
+  .container {
+    position: relative;
+  }
+  @include mq("xl") {
+    margin-bottom: calcRem(120);
+  }
+  &-carousel {
+    width: calc(100% - 160px);
+    margin: 0 auto;
+  }
+  &-card {
+    text-align: center;
+    img {
+      width: calcRem(120);
+      height: calcRem(120);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &-title {
+      font-size: calcRem(16);
+      font-weight: 700;
+      line-height: normal;
+      margin-top: 15px;
+    }
+    &-sub {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+
+  div[class^="swiper-button"] {
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}

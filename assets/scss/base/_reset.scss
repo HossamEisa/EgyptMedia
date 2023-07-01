@@ -3,3 +3,7 @@ ol {
   font-size: calcRem(16);
   line-height: calcRem(20);
 }
+
+a {
+  overflow-wrap: break-word;
+}

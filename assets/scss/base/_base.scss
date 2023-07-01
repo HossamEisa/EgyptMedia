@@ -1,40 +1,40 @@
 :root {
-  font-size: 16px;
+  font-size: 14px;
   background-repeat: no-repeat;
   background-size: contain;
 
-  @include mq("xxl") {
-    font-size: 20px;
-  }
-
-  --main-color: #1db05d;
-  --text-color: #7a7a7a;
+  --main-color: #f29044;
+  --text-color: #fff;
   --dark-color: #474747;
   --mint-green: #109d91;
   --white: #fff;
   --black: #000;
   --light-grey: #f5f5f5;
   --med-grey: #f8f8f8;
+  @include mq("md") {
+    font-size: 16px;
+  }
 }
 
 body {
   font-family: $font-r, var(--bs-body-font-family);
   color: var(--text-color);
   direction: $direction;
-  text-align: $right;
+  text-align: $left;
   background-color: var(--light-grey);
   line-height: 1.2;
-  // @extend %scroll;
+  background-color: #1a161c;
+  @extend %scroll;
 }
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
-  background: #1db05d;
+  background: var(--main-color);
 }
 
 ::selection {
   color: #fff;
-  background: #1db05d;
+  background: var(--main-color);
 }
 .fa-arrow-right-long {
   @at-root {
@@ -68,12 +68,3 @@ body {
 .mt-n5 {
   margin-top: -3rem;
 }
-
-// :is(.international-museums) {
-//   background-color: red !important;
-// }
-// body {
-//   :has(.international-museums) {
-//     background-color: green !important;
-//   }
-// }

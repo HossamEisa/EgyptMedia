@@ -1,0 +1,33 @@
+.card {
+  &.news-card {
+    background: transparent;
+    border: none;
+    img {
+      height: 176px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+    .card-body {
+      padding: calcRem(15) 0;
+      .card-title,
+      .card-title a {
+        font-size: calcRem(16);
+        line-height: calcRem(20);
+        font-family: $font-b;
+        color: #fff;
+        text-decoration: none;
+        @include ellipse-rows(3);
+        @include mq("lg") {
+          font-size: calcRem(20);
+          line-height: calcRem(26);
+        }
+      }
+      time {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.contact-us {
+  padding: calcRem(40) 0;
+  margin-bottom: calcRem(40);
+
+  img {
+    max-height: 284px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+}

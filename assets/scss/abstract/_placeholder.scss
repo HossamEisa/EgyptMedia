@@ -1,7 +1,7 @@
 %scroll {
 
   scrollbar-width: thin;
-  scrollbar-color: var(--mint-green) $font-white;
+  scrollbar-color: #454247 #272329;
 
   // /* width */
   &::-webkit-scrollbar {
@@ -11,14 +11,14 @@
 
   /* Track */
     &::-webkit-scrollbar-track {
-      border: #f5f8fd 2px solid;
-      background-color: #d8d8d8;
+      border: #1A161C 2px solid;
+      background-color: #1A161C;
       border-radius: 24px;
     }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: var(--mint-green);
+    background: #454247;
     // border-radius: 50px;
   }
 

@@ -1,10 +1,9 @@
 .btn {
-  --bs-btn-padding-x: 1.3rem;
-  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.4rem;
   --bs-btn-font-size: 0.9rem;
-  --bs-btn-border-radius: 50px;
+  --bs-btn-border-radius: 40px;
   --bs-btn-line-height: 1.5;
-  font-family: $font-b;
   i {
     font-size: min(0.8rem, 1rem);
   }
@@ -18,8 +17,10 @@
   --bs-btn-border-color: var(--main-color);
   --bs-btn-color: var(--white);
   --bs-btn-hover-bg: transparent;
-  --bs-btn-hover-border-color: var(--mint-green);
-  --bs-btn-hover-color: var(--main-color);
+  --bs-btn-hover-border-color: var(--white);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-active-bg: var(--main-color);
+  --bs-btn-active-border-color: var(--main-color);
 }
 .btn-outline-primary {
   --bs-btn-color: var(--main-color);
@@ -30,18 +31,11 @@
   --bs-btn-active-border-color: var(--main-color);
   --bs-btn-disabled-color: var(--main-color);
   --bs-btn-disabled-border-color: var(--main-color);
-  &:hover {
-    background-color: transparent;
-    background-image: linear-gradient(
-      240deg,
-      var(--mint-green) 0%,
-      var(--main-color) 100%
-    );
-  }
+
 }
 
-.btn-dark {
-  --bs-btn-bg: var(--dark-color);
-  --bs-btn-border-color: var(--dark-color);
-  --bs-btn-hover-bg: #212529;
-}
+// .btn-dark {
+//   --bs-btn-bg: var(--dark-color);
+//   --bs-btn-border-color: var(--dark-color);
+//   --bs-btn-hover-bg: #212529;
+// }

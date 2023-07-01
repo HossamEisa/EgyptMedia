@@ -1,7 +1,7 @@
 {
-  "name": "salamfair",
+  "name": "egyptmedia",
   "version": "1.0.0",
-  "description": "SalamFair",
+  "description": "egyptmedia",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch assets/scss:assets/css --style compressed"

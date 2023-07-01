@@ -1,0 +1,72 @@
+.form-label {
+  color: rgba(255, 255, 255, 0.7);
+  padding-inline-start: calcRem(12);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #9a979c inset !important;
+}
+
+.form-control {
+  padding: 0.45rem calcRem(16);
+  border: 1px solid #454247;
+  background-color: #2f2b31;
+  border-radius: 32px;
+  transition: 0.4s ease-in-out;
+  font-size: calcRem(14);
+  color: var(--white);
+
+  &:focus {
+    box-shadow: none;
+    background-color: #454247;
+    border: 1px solid var(--main-color);
+    color: var(--white);
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+//? @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// textarea
+//? @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+textarea,
+textarea.form-control {
+  resize: none;
+  border-radius: 18px;
+}
+
+//? @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// Select
+//? @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.form-select {
+  border: 1px solid #454247;
+  background-color: #2f2b31;
+  color: var(--white);
+  border-radius: 32px;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/ddm-arrow.svg");
+  &:focus {
+    box-shadow: none;
+    background-color: #454247;
+    border: 1px solid var(--main-color);
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

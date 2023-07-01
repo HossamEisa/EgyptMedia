@@ -16,10 +16,10 @@ input[type="number"] {
 
 /* Change the white to any color */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #9a979c inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #9a979c inset !important;
 }
 
 .form-control {
@@ -67,6 +67,10 @@ textarea.form-control {
     border: 1px solid var(--main-color);
   }
   &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  option:disabled {
     color: rgba(255, 255, 255, 0.6);
   }
 }

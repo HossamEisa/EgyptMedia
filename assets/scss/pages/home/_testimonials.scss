@@ -14,26 +14,28 @@
         padding: 0;
       }
       .media-widget {
-        padding: calcRem(20);
+        padding: calcRem(30) calcRem(20);
         background-position: calc(100% - 32px) 30px;
         background-repeat: no-repeat;
         transform-origin: center;
-        transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: 0.8s all ease-in-out;
         opacity: 0.5;
-        transform: scale(0.95);
+        transform: scale(0.92);
         @include mq("lg") {
           padding: calcRem(30);
           margin-top: 10px;
+          transform: scale(0.95);
+          padding: calcRem(20);
         }
       }
       &-active {
         width: 80%;
+
         @include mq("lg") {
           width: 65%;
         }
         .media-widget {
           opacity: 1;
-          padding: calcRem(30) calcRem(20);
           background-image: url("../img/comma.png");
           transform: scale(1);
 

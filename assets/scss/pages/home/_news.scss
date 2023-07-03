@@ -1,6 +1,7 @@
 .news {
   margin-bottom: calcRem(40);
   position: relative;
+ 
   &::after {
     content: "";
     position: absolute;

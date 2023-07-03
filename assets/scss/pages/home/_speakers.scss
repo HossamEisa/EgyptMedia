@@ -1,5 +1,7 @@
 .speakers {
   margin-bottom: calcRem(80);
+  overflow: hidden;
+
   .container {
     position: relative;
   }
@@ -7,9 +9,14 @@
     margin-bottom: calcRem(120);
   }
   &-carousel {
-    width: calc(100% - 160px);
-    margin: 0 auto;
+    overflow: visible;
+    @include mq("lg") {
+      width: calc(100% - 160px);
+      margin: 0 auto;
+      overflow: hidden;
+    }
   }
+
   &-card {
     text-align: center;
     img {
@@ -33,7 +40,11 @@
   }
 
   div[class^="swiper-button"] {
-    transform: translateY(-50%);
     top: 50%;
+    position: static;
+    @include mq("lg") {
+      position: absolute;
+      transform: translateY(-50%);
+    }
   }
 }

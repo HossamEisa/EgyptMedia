@@ -1,6 +1,6 @@
 .hero-section {
   padding-top: 170px;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
   position: relative;
 
   @include mq("lg") {
@@ -21,7 +21,8 @@
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.50) 0%,
-      rgba(0, 0, 0, 0.30) 50%,
+      rgba(0, 0, 0, 0.40) 50%,
+      rgba(0, 0, 0, 0.30) 80%,
       rgba(0, 0, 0, 0) 100%
     );
     z-index: 1;

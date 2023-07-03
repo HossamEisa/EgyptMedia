@@ -67,12 +67,12 @@
       display: block;
 
       .mobile-menu-logo {
-        max-width: 30%;
+        max-width: 50%;
         object-fit: contain;
-        margin: 0 auto;
         display: block;
         height: auto;
         margin-bottom: 25px;
+        padding-inline-start: 15px;
       }
       .close-mobile-icon {
         all: unset;

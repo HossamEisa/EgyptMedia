@@ -12,8 +12,9 @@
     .swiper-wrapper {
       align-items: center;
       .swiper-slide {
-        //   width: 20%;
-        //   min-width: 200px;
+        text-align: center;
+        font-size: 18px;
+
         text-align: center;
         padding: 0 calcRem(20);
 
@@ -29,9 +30,11 @@
     }
   }
   div[class^="swiper-button"] {
-    display: none;
+    top: 50%;
+    position: static;
     @include mq("lg") {
-      display: flex;
+      position: absolute;
+      transform: translateY(-50%);
     }
   }
 }

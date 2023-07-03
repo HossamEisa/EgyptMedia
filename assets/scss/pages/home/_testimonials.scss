@@ -22,10 +22,11 @@
         opacity: 0.5;
         transform: scale(0.92);
         @include mq("lg") {
-          padding: calcRem(30);
-          margin-top: 10px;
-          transform: scale(0.95);
-          padding: calcRem(20);
+          padding: calcRem(50) calcRem(30);
+          transform: scale(0.95, 0.8);
+        }
+        img {
+          object-fit: contain;
         }
       }
       &-active {
@@ -37,11 +38,10 @@
         .media-widget {
           opacity: 1;
           background-image: url("../img/comma.png");
-          transform: scale(1);
+          transform: scale(1, 1);
 
           @include mq("lg") {
             margin-top: 0;
-            padding: calcRem(40);
           }
         }
       }

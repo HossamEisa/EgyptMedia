@@ -10,13 +10,11 @@
       padding: calcRem(20) calcRem(40);
     }
     .swiper-wrapper {
-      align-items: center;
       .swiper-slide {
-        text-align: center;
         font-size: 18px;
-
         text-align: center;
         padding: 0 calcRem(20);
+        overflow: hidden;
 
         @include mq("lg") {
           padding: 0 calcRem(40);

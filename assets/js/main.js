@@ -163,7 +163,7 @@ var mediaPartners = new Swiper(".media-partners-carousel ", {
       simulateTouch: false,
       grid: {
         rows: 1,
-        fill: "row",
+        fill: "column",
       },
     },
   },

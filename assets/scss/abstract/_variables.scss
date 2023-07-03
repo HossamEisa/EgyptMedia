@@ -1,12 +1,8 @@
 // Fonts
 
-$font-r: toggleFont(Helvetica, DINNextLTArabic-Regular);
-$font-l: toggleFont(Helvetica-Bold, DINNextLTArabic-Light);
-$font-b: toggleFont(Helvetica-Bold, DINNextLTArabic-Bold);
+$font-r: toggleFont(Helvetica, Cairo);
+$font-b: toggleFont(Helvetica-Bold, Cairo-Bold);
 
-$bukra-r: toggleFont(Poppins-Bold, bukra-regular);
-$bukra-m: toggleFont(Poppins-Bold, bukra-medium);
-$bukra-b: toggleFont(Poppins-Bold, bukra-bold);
 
 // Variables
 

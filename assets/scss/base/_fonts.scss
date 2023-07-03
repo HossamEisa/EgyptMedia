@@ -7,18 +7,18 @@
 
 
 @font-face {
-  font-family: toggleFont("Helvetica", "DINNextLTArabic-Regular");
+  font-family: toggleFont("Helvetica", "Cairo");
   src: toggleFont(
     url("../fonts/Helvetica.ttf"),
-    url("../fonts/DINNextLTArabic-Regular.ttf")
+    url("../fonts/Cairo-Regular.ttf")
   );
 }
 
 @font-face {
-  font-family: toggleFont("Helvetica-Bold", "DINNextLTArabic-Bold");
+  font-family: toggleFont("Helvetica-Bold", "Cairo-Bold");
   src: toggleFont(
     url("../fonts/Helvetica-Bold.ttf"),
-    url("../fonts/DINNextLTArabic-Bold.ttf")
+    url("../fonts/Cairo-Bold.ttf")
   );
 }
 

@@ -18,9 +18,15 @@
         background-position: calc(100% - 32px) 30px;
         background-repeat: no-repeat;
         transform-origin: center;
+        background-image: url("../img/comma.png");
+        background-size: 0;
         transition: 0.8s all ease-in-out;
         opacity: 0.5;
         transform: scale(0.92);
+
+        @at-root body[dir="rtl"] & {
+          background-position: 32px 30px;
+        }
         @include mq("lg") {
           padding: calcRem(50) calcRem(30);
           transform: scale(0.95, 0.8);
@@ -37,14 +43,21 @@
         }
         .media-widget {
           opacity: 1;
-          background-image: url("../img/comma.png");
           transform: scale(1, 1);
-
+          background-size: auto;
+        
           @include mq("lg") {
             margin-top: 0;
           }
         }
       }
+    }
+  }
+
+  div[class^="swiper-button"] {
+    @at-root body[dir="rtl"] & {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
     }
   }
 }

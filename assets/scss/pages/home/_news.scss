@@ -11,11 +11,22 @@
     width: 40%;
     background-image: url(../img/orange-shadow-right.png);
     background-repeat: no-repeat;
-    background-position: #{$right} center;
+    background-position: right center;
     background-size: contain;
     z-index: -1;
+    @at-root body[dir="rtl"] & {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
   }
   @include mq("xl") {
     margin-bottom: calcRem(80);
+  }
+
+  div[class^="swiper-button"] {
+    @at-root body[dir="rtl"] & {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
   }
 }

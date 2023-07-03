@@ -51,7 +51,10 @@
         justify-content: center;
         font-size: calcRem(22);
         text-indent: 5px;
-        transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color,;
+        transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color;
+        @at-root body[dir="rtl"] & {
+          text-indent: -5px;
+        }
       }
       &:hover {
         .play-circle {

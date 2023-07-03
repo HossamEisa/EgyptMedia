@@ -12,12 +12,12 @@
     }
     > .steps .current-info {
       position: absolute;
-      left: -99999px;
+      #{$left}: -99999px;
     }
     .content {
       .title {
         position: absolute;
-        left: -99999px;
+        #{$left}: -99999px;
       }
 
       .title.current {
